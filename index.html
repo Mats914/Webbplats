@@ -1,0 +1,34 @@
+<!DOCTYPE html> <!-- Deklaration att detta är ett HTML5-dokument -->
+<html lang="sv"> <!-- Anger att sidans språk är svenska -->
+<head>
+  <meta charset="UTF-8"> <!-- Teckenkodning: UTF-8 för att stödja svenska tecken -->
+  <title>Klicka på bollen!</title> <!-- Titeln som visas i webbläsarens flik -->
+  <link rel="stylesheet" href="style.css"> <!-- Länk till extern CSS-fil för design/styling -->
+</head>
+<body>
+  <!-- Navigationsmeny som länkar till webbplatsens olika sidor -->
+  <nav>
+    <a href="index.html">Hem</a> <!-- Länk till startsidan -->
+    <a href="teknik.html">Teknik</a> <!-- Länk till sidan som beskriver den tekniska lösningen -->
+    <a href="dokumentation.html">Dokumentation</a> <!-- Länk till dokumentationssidan -->
+  </nav>
+
+  <!-- Sidhuvud med titel och beskrivning av spelet -->
+  <header>
+    <h1>Välkommen till "Klicka på bollen!"</h1> <!-- Huvudrubrik -->
+    <p>Ett spel där du tränar din reaktionsförmåga. Klicka på bollen för att få poäng!</p> <!-- Kort introduktion -->
+  </header>
+
+  <!-- Huvudinnehåll för sidan -->
+  <main>
+    <!-- Canvas-element där själva spelet ritas upp med JavaScript -->
+    <canvas id="gameCanvas" width="600" height="400"></canvas>
+    
+    <!-- Poängvisning som uppdateras dynamiskt via JavaScript -->
+    <p>Poäng: <span id="score">0</span></p>
+  </main>
+
+  <!-- Länk till extern JavaScript-fil som innehåller spelets logik -->
+  <script src="script.js"></script>
+</body>
+</html>

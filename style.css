@@ -1,0 +1,43 @@
+/* Grundstil för hela sidan */
+body {
+  font-family: Arial, sans-serif;        /* Använder ett rent och lättläst typsnitt */
+  text-align: center;                    /* Centrerar textinnehållet */
+  background-color: #f0f8ff;             /* Ljusblå bakgrundsfärg */
+  margin: 0;                             /* Tar bort standardmarginaler */
+  padding: 0;                            /* Tar bort standardutfyllnad */
+}
+
+/* Navigationsfältets stil */
+nav {
+  background-color: #333;                /* Mörkgrå bakgrundsfärg */
+  padding: 10px;                         /* Lite luft runt länkarna */
+}
+
+/* Stil för länkar i navigationsmenyn */
+nav a {
+  color: white;                          /* Vit textfärg */
+  margin: 10px;                          /* Avstånd mellan länkarna */
+  text-decoration: none;                 /* Tar bort understrykning */
+}
+
+/* Stil för canvas-elementet där spelet visas */
+canvas {
+  border: 2px solid #444;                /* Mörk ram runt canvas */
+  margin-top: 20px;                      /* Avstånd uppåt från andra element */
+  background-color: white;               /* Vit bakgrund för tydlighet */
+}
+
+/* Stil för bilder (t.ex. skärmdumpar) */
+img {
+  height: 400px;                         /* Bestämd höjd */
+  width: 400px;                          /* Bestämd bredd */
+}
+
+/* Stil för listor (ol = numrerad, ul = punktlista) */
+ol, ul {
+  list-style-position: inside;           /* Visar siffror/punkter inuti listans innehåll */
+  text-align: left;                      /* Vänsterjustering för bättre läsbarhet */
+  margin: 0 auto;                        /* Centrerar listan horisontellt */
+  max-width: 600px;                      /* Begränsar listans bredd */
+  padding-left: 1rem;                    /* Lite indrag från vänster */
+}
