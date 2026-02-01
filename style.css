@@ -1,43 +1,112 @@
 /* Grundstil för hela sidan */
 body {
-  font-family: Arial, sans-serif;        /* Använder ett rent och lättläst typsnitt */
-  text-align: center;                    /* Centrerar textinnehållet */
-  background-color: #f0f8ff;             /* Ljusblå bakgrundsfärg */
-  margin: 0;                             /* Tar bort standardmarginaler */
-  padding: 0;                            /* Tar bort standardutfyllnad */
+  font-family: Arial, sans-serif;
+  /* Använder ett rent och lättläst typsnitt */
+  text-align: center;
+  /* Centrerar textinnehållet */
+  background-color: #f0f8ff;
+  /* Ljusblå bakgrundsfärg */
+  margin: 0;
+  /* Tar bort standardmarginaler */
+  padding: 0;
+  /* Tar bort standardutfyllnad */
 }
 
 /* Navigationsfältets stil */
 nav {
-  background-color: #333;                /* Mörkgrå bakgrundsfärg */
-  padding: 10px;                         /* Lite luft runt länkarna */
+  background-color: #333;
+  /* Mörkgrå bakgrundsfärg */
+  padding: 10px;
+  /* Lite luft runt länkarna */
 }
 
 /* Stil för länkar i navigationsmenyn */
 nav a {
-  color: white;                          /* Vit textfärg */
-  margin: 10px;                          /* Avstånd mellan länkarna */
-  text-decoration: none;                 /* Tar bort understrykning */
+  color: white;
+  /* Vit textfärg */
+  margin: 10px;
+  /* Avstånd mellan länkarna */
+  text-decoration: none;
+  /* Tar bort understrykning */
+  padding: 8px 16px;
+  /* Utrymme runt länktexten */
+  border-radius: 4px;
+  /* Rundade hörn */
+  transition: background-color 0.2s ease;
+  /* Mjuk övergång vid hover */
+}
+
+/* Hover-effekt när muspekaren är över länken */
+nav a:hover {
+  background-color: #555;
+  /* Mörkare bakgrund vid hover */
+}
+
+/* Aktiv sida - visar vilken sida användaren är på */
+nav a.active {
+  background-color: #0066cc;
+  /* Blå bakgrund för aktiv sida */
+  font-weight: bold;
+}
+
+/* Game stats container */
+#gameStats {
+  display: flex;
+  /* Flexbox för horisontell layout */
+  justify-content: center;
+  /* Centrerar innehållet */
+  gap: 24px;
+  /* Avstånd mellan stats */
+  flex-wrap: wrap;
+  /* Bryt till nästa rad på små skärmar */
+  margin: 16px 0;
+}
+
+/* Game over/restart message */
+#gameMessage {
+  font-size: 1.1rem;
+  margin: 12px 0;
+  min-height: 1.5em;
 }
 
 /* Stil för canvas-elementet där spelet visas */
 canvas {
-  border: 2px solid #444;                /* Mörk ram runt canvas */
-  margin-top: 20px;                      /* Avstånd uppåt från andra element */
-  background-color: white;               /* Vit bakgrund för tydlighet */
+  border: 2px solid #444;
+  /* Mörk ram runt canvas */
+  margin-top: 20px;
+  /* Avstånd uppåt från andra element */
+  background-color: white;
+  /* Vit bakgrund för tydlighet */
+  max-width: 100%;
+  /* Responsiv: anpassar sig till skärmen */
 }
 
 /* Stil för bilder (t.ex. skärmdumpar) */
 img {
-  height: 400px;                         /* Bestämd höjd */
-  width: 400px;                          /* Bestämd bredd */
+  height: auto;
+  /* Behåller bildproportioner */
+  max-width: 400px;
+  /* Max bredd för responsivitet */
+}
+
+/* Spelskärmdump på tekniksidan - anpassad storlek */
+img.game-screenshot {
+  max-width: 300px;
+  /* Begränsad bredd för demo-bild */
+  height: auto;
 }
 
 /* Stil för listor (ol = numrerad, ul = punktlista) */
-ol, ul {
-  list-style-position: inside;           /* Visar siffror/punkter inuti listans innehåll */
-  text-align: left;                      /* Vänsterjustering för bättre läsbarhet */
-  margin: 0 auto;                        /* Centrerar listan horisontellt */
-  max-width: 600px;                      /* Begränsar listans bredd */
-  padding-left: 1rem;                    /* Lite indrag från vänster */
+ol,
+ul {
+  list-style-position: inside;
+  /* Visar siffror/punkter inuti listans innehåll */
+  text-align: left;
+  /* Vänsterjustering för bättre läsbarhet */
+  margin: 0 auto;
+  /* Centrerar listan horisontellt */
+  max-width: 600px;
+  /* Begränsar listans bredd */
+  padding-left: 1rem;
+  /* Lite indrag från vänster */
 }

@@ -1,14 +1,17 @@
 <!DOCTYPE html> <!-- Deklaration att detta är ett HTML5-dokument -->
 <html lang="sv"> <!-- Anger att sidans språk är svenska -->
+
 <head>
   <meta charset="UTF-8"> <!-- Teckenkodning: UTF-8 för att stödja svenska tecken -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsiv design för mobil -->
   <title>Klicka på bollen!</title> <!-- Titeln som visas i webbläsarens flik -->
   <link rel="stylesheet" href="style.css"> <!-- Länk till extern CSS-fil för design/styling -->
 </head>
+
 <body>
   <!-- Navigationsmeny som länkar till webbplatsens olika sidor -->
   <nav>
-    <a href="index.html">Hem</a> <!-- Länk till startsidan -->
+    <a href="index.html" class="active">Hem</a> <!-- Länk till startsidan -->
     <a href="teknik.html">Teknik</a> <!-- Länk till sidan som beskriver den tekniska lösningen -->
     <a href="dokumentation.html">Dokumentation</a> <!-- Länk till dokumentationssidan -->
   </nav>
@@ -21,14 +24,20 @@
 
   <!-- Huvudinnehåll för sidan -->
   <main>
+    <!-- Game stats: score, high score, level, timer -->
+    <div id="gameStats">
+      <span>Poäng: <strong id="score">0</strong></span>
+      <span>Högsta poäng: <strong id="highScore">0</strong></span>
+      <span>Nivå: <strong id="level">1</strong></span>
+      <span>Tid: <strong id="timer">60</strong>s</span>
+    </div>
     <!-- Canvas-element där själva spelet ritas upp med JavaScript -->
     <canvas id="gameCanvas" width="600" height="400"></canvas>
-    
-    <!-- Poängvisning som uppdateras dynamiskt via JavaScript -->
-    <p>Poäng: <span id="score">0</span></p>
+    <p id="gameMessage"></p>
   </main>
 
   <!-- Länk till extern JavaScript-fil som innehåller spelets logik -->
   <script src="script.js"></script>
 </body>
+
 </html>

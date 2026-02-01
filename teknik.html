@@ -1,15 +1,18 @@
 <!DOCTYPE html> <!-- Deklaration som visar att det är ett HTML5-dokument -->
 <html lang="sv"> <!-- Anger att innehållet är på svenska -->
+
 <head>
   <meta charset="UTF-8"> <!-- Teckenkodning: UTF-8 används för att visa svenska tecken korrekt -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsiv design för mobil -->
   <title>Teknik</title> <!-- Titeln på sidan som visas i webbläsarens flik -->
   <link rel="stylesheet" href="style.css"> <!-- Länk till extern CSS-fil för styling -->
 </head>
+
 <body>
   <!-- Navigationsmeny med länkar till de tre sidorna -->
   <nav>
     <a href="index.html">Hem</a> <!-- Länk till startsidan -->
-    <a href="teknik.html">Teknik</a> <!-- Länk till tekniksidan (nuvarande sida) -->
+    <a href="teknik.html" class="active">Teknik</a> <!-- Länk till tekniksidan (nuvarande sida) -->
     <a href="dokumentation.html">Dokumentation</a> <!-- Länk till dokumentationssidan -->
   </nav>
 
@@ -19,7 +22,8 @@
     <p>Spelet är byggt med HTML5, CSS3 och JavaScript.</p> <!-- Kort förklaring av vilka tekniker som används -->
 
     <h2>Canvas</h2> <!-- Delrubrik för Canvas-tekniken -->
-    <p>HTML5 Canvas används för att rita och animera bollen. JavaScript används för att lyssna på klick och räkna poäng.</p>
+    <p>HTML5 Canvas används för att rita och animera bollen. JavaScript används för att lyssna på klick och räkna poäng.
+    </p>
     <!-- Förklaring av hur Canvas och JavaScript används i projektet -->
 
     <h2>Kodexempel</h2> <!-- Delrubrik för kodavsnitt -->
@@ -27,8 +31,10 @@
 ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
     </pre> <!-- Exempel på hur man ritar en cirkel med canvas i JavaScript -->
 
-    <h2>bild av spelet</h2> <!-- Delrubrik för bild -->
-    <img src="media/demo.png" alt="Skärmdump av spelet" width="300"> <!-- Bild som visar hur spelet ser ut -->
+    <h2>Bild av spelet</h2> <!-- Delrubrik för bild -->
+    <img src="media/demo.png" alt="Skärmdump av spelet" class="game-screenshot">
+    <!-- Bild som visar hur spelet ser ut -->
   </main>
 </body>
+
 </html>
